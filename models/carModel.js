@@ -1,6 +1,5 @@
 import { pool } from "../db.js";
 
-// INSERT or UPDATE (already done)
 export async function saveCarListing(car) {
   const query = `
     INSERT INTO car_listings (fb_id, title, price, currency, year, mileage, location)

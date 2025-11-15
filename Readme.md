@@ -40,26 +40,6 @@ A backend service built with **Node.js**, **Express**, **Puppeteer**, and **Post
 
 ---
 
-## 🧱 Project Folder Structure
-OneLot/
-│── scraper/
-│ └── facebookScraper.js
-│── controllers/
-│ └── carController.js
-│── models/
-│ └── carModel.js
-│── routes/
-│ └── carRoutes.js
-│── migrations/
-│ └── 001_create_cars_table.sql
-│── db.js
-│── index.js
-│── package.json
-│── .env.example
-│── README.md
-
-
-
 # ⚙️ Setup Instructions
 
 ## 1️⃣ Clone the repository  
@@ -69,6 +49,7 @@ cd OneLot
  
 
 ### Install Dependencies 
+
 npm install 
 
 

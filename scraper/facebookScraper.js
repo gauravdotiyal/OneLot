@@ -12,7 +12,6 @@ export async function scrapeCars() {
   const page = await browser.newPage();
 
   try {
-    // 1️⃣ Login to Facebook
     await page.goto("https://www.facebook.com/login", {
       waitUntil: "networkidle2",
     });
@@ -22,15 +21,14 @@ export async function scrapeCars() {
 
     await page.click("[name='login']");
     await page.waitForNavigation({ waitUntil: "networkidle2" });
-
-    // 2️⃣ Go to the car listings page
+ 
     const URL =
       "https://www.facebook.com/marketplace/manila/cars?minPrice=350000&exact=false";
 
     await page.goto(URL, { waitUntil: "networkidle2" });
     await page.waitForSelector('[role="main"]');
 
-    // 3️⃣ Scrape the listings
+    //  Scrape the listings
     const listings = await page.evaluate(() => {
       const cards = document.querySelectorAll(
         '[role="main"] a[href*="/marketplace/item"]'
